@@ -12,7 +12,7 @@ set -e
 : ${PORT:="80"}
 : ${RELEASE:="latest"}
 
-export MONGO_URL
+#export MONGO_URL
 export PORT
 
 # If we were given arguments, run them instead
@@ -141,4 +141,4 @@ fi
 # Run meteor
 cd ${BUNDLE_DIR}
 echo "Starting Meteor Application..."
-exec node ./main.js
+exec meteor
