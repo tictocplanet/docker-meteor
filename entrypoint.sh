@@ -44,6 +44,7 @@ fi
 mkdir -p $APP_DIR
 mkdir -p $SRC_DIR
 
+node -v
 
 # getrepo pulls the supplied git repository into $SRC_DIR
 function getrepo {
