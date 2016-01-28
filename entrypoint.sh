@@ -125,6 +125,7 @@ fi
 if [ -e ${BUNDLE_DIR}/programs/server ]; then
    echo "Installing NPM prerequisites..."
    pushd ${BUNDLE_DIR}/programs/server/
+   npm install npm -g
    npm install
    popd
 else
