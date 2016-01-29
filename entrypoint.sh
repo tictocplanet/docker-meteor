@@ -100,4 +100,4 @@ fi
 # Run meteor
 cd ${METEOR_DIR}
 echo "Starting Meteor Application..."
-exec meteor
+exec sudo meteor
