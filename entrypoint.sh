@@ -41,8 +41,6 @@ fi
 # Make sure critical directories exist
 mkdir -p $SRC_DIR
 
-node -v
-
 # getrepo pulls the supplied git repository into $SRC_DIR
 function getrepo {
    if [ -e ${SRC_DIR}/.git ]; then
