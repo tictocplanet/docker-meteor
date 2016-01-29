@@ -85,6 +85,7 @@ if [ -n "${METEOR_DIR}" ]; then
    chmod +x /tmp/meteor.sh
    /tmp/meteor.sh
    rm /tmp/meteor.sh
+fi
 
 # Install NPM modules
 #if [ -e ${METEOR_DIR} ]; then
@@ -99,4 +100,4 @@ if [ -n "${METEOR_DIR}" ]; then
 # Run meteor
 cd ${METEOR_DIR}
 echo "Starting Meteor Application..."
-#exec meteor
+exec meteor
