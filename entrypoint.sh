@@ -87,16 +87,16 @@ if [ -n "${METEOR_DIR}" ]; then
    rm /tmp/meteor.sh
 
 # Install NPM modules
-if [ -e ${METEOR_DIR} ]; then
-   echo "Installing NPM prerequisites..."
-   pushd ${METEOR_DIR}
-   npm install
-   popd
-else
-   echo "Unable to locate server directory in ${BUNDLE_DIR}; hold on: we're likely to fail"
-fi
+#if [ -e ${METEOR_DIR} ]; then
+#   echo "Installing NPM prerequisites..."
+#   pushd ${METEOR_DIR}
+#   npm install
+#   popd
+#else
+#   echo "Unable to locate server directory in ${BUNDLE_DIR}; hold on: we're likely to fail"
+#fi
 
 # Run meteor
 cd ${METEOR_DIR}
 echo "Starting Meteor Application..."
-exec meteor
+#exec meteor
