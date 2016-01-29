@@ -70,8 +70,8 @@ fi
 # See if we have a valid meteor source
 METEOR_DIR=$(find ${SRC_DIR} -type d -name .meteor -print |head -n1)
 if [ -n "${METEOR_DIR}" ]; then
-   echo "Meteor source found in ${METEOR_DIR}"
-   cd ${METEOR_DIR}/..
+   echo "Meteor source found in ${SRC_DIR}/${METEOR_DIR}"
+   cd ${SRC_DIR}/..
 
    # Download Meteor installer
    echo "Downloading Meteor install script..."
@@ -87,17 +87,7 @@ if [ -n "${METEOR_DIR}" ]; then
    rm /tmp/meteor.sh
 fi
 
-# Install NPM modules
-#if [ -e ${METEOR_DIR} ]; then
-#   echo "Installing NPM prerequisites..."
-#   pushd ${METEOR_DIR}
-#   npm install
-#   popd
-#else
-#   echo "Unable to locate server directory in ${BUNDLE_DIR}; hold on: we're likely to fail"
-#fi
-
 # Run meteor
-cd ${METEOR_DIR}
+cd ${SRC_DIR}
 echo "Starting Meteor Application..."
 meteor
