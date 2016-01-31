@@ -12,6 +12,7 @@ set -e
 : ${RELEASE:="latest"}
 
 export PORT
+export SETTINGS
 
 # If we were given arguments, run them instead
 if [ $? -gt 1 ]; then
@@ -90,4 +91,8 @@ fi
 # Run meteor
 cd ${SRC_DIR}
 echo "Starting Meteor Application..."
-meteor
+if [ -n "${SETTINGS}" ]; then 
+   meteor run --settings=${SETTINGS}
+else
+   meteor
+fi
